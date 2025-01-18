@@ -235,3 +235,4 @@ src/.idea/
 *.DS_STORE
 repositories/*
 !repositories/.gitkeep
+/src/Anvil.AppHost/Properties/pgadmin.tmp.json
