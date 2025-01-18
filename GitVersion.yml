@@ -1,0 +1,14 @@
+assembly-versioning-scheme: None
+commit-message-incrementing: Enabled
+mode: Mainline
+
+branches:
+  master:
+    regex: main
+    increment: Patch
+  develop:
+    regex: dev(elop)?(ment)?$
+    tag: ZAlpha
+    is-release-branch: false
+ignore:
+  sha: [ ]
