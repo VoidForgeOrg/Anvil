@@ -21,6 +21,10 @@ var minio = builder.AddContainer("dex", "ghcr.io/dexidp/dex", "v2.37.0")
     .WithHttpsEndpoint(targetPort: 5556, name: "main", isProxied: false)
     .WithLifetime(containerLifetime);
 
+// https://dexidp.io/docs/guides/using-dex/
+// http://localhost:5556/dex/.well-known/openid-configuration
+
+
 // -------------------- Universe
 var universe = builder.AddProject<Universe>("universe", launchProfileName: null)
     .WithReference(postgres.AddDatabase("UniverseDb"))
