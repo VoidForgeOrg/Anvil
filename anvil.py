@@ -48,6 +48,7 @@ def clone_repositories():
                 continue
 
             # Extract repository name
+            logging.info('Cloning repository %s', repo_url)
             repo_name = os.path.splitext(repo_url.split('/')[-1])[0]
             target_dir = os.path.join('repositories', repo_name)
 
@@ -89,8 +90,10 @@ def pull_repositories():
 
     success = True
     for repo_name in os.listdir('repositories'):
+        logging.info('Pulling repository %s', repo_name)
         repo_path = os.path.join('repositories', repo_name)
         if not os.path.isdir(repo_path):
+            logging.error('Error: repository %s not found', repo_name)
             continue
 
         try:
@@ -117,8 +120,10 @@ def switch_all_repositories_to_main():
 
     success = True
     for repo_name in os.listdir('repositories'):
+        logging.info('Switching repository %s', repo_name)
         repo_path = os.path.join('repositories', repo_name)
         if not os.path.isdir(repo_path):
+            logging.error('Error: repository %s not found', repo_name)
             continue
 
         try:
