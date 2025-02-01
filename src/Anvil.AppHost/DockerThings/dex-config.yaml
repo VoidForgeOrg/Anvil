@@ -7,11 +7,12 @@ storage:
 
 web:
   http: 0.0.0.0:5556
+  allowedOrigins: ['*']
 
 staticClients:
   - id: example-app
     redirectURIs:
-      - 'http://localhost:5555/callback'
+      - 'http://localhost:5555'
     name: 'Example App'
     secret: example-app-secret
 
