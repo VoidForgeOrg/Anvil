@@ -1,0 +1,6 @@
+[submodule "repositories/Universe"]
+	path = repositories/Universe
+	url = git@github.com:VoidForgeOrg/Universe.git
+[submodule "repositories/frontend"]
+	path = repositories/frontend
+	url = git@github.com:VoidForgeOrg/frontend.git
